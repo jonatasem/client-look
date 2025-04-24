@@ -1,0 +1,21 @@
+.container-footer {
+    padding: 10px;
+    color: white;
+    text-align: center;
+
+    p {
+        margin: 0;
+        font-size: 0.9rem;
+        &:last-child {
+            margin-top: 0.5rem;
+            a {
+                margin: 0 0.2rem;
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    color: #969696;
+                }
+            }
+        }
+    }
+}

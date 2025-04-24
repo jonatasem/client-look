@@ -1,0 +1,190 @@
+
+.container-list {
+
+    .list-header {
+        background-image: url(../../assets/img/list-logo.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: last baseline;
+    }   
+
+    .list-center {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+
+        p {
+            color: white;
+            cursor: pointer;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+
+            &:active {
+                transform: scale(0.7);
+                transition: 0.5s;
+            }
+        }
+
+        .head-list-left {
+            ul {
+                li {
+                    list-style-type: circle;
+                    color: white;
+                    
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 20px;
+
+                        &:hover {
+                            color: #969696;
+                        }
+                    }
+                }
+            }
+        }
+
+        .head-list-right {
+            display: flex;
+            align-items: center;
+
+            .input-search-active {
+                display: none; // Inicialmente escondido
+                margin-left: 0.5rem;
+    
+                &.active {
+                    display: block; // Mostra o campo de pesquisa quando ativo
+                    transition: 1s;
+                }
+    
+                input {
+                    padding: 0.5rem;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    width: 250px;
+                    outline: 0;
+                    border: 1px solid silver;
+                }
+            }
+        }
+    }
+
+    .notification {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .container-movies {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        background-color: #ffffff21;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        li {
+            margin: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 150px;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: transform 0.2s;
+                max-height: 200px;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            .btn-like {
+                margin-top: 5px;
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #45a049;
+                }
+            }
+        }
+    }
+}
+@media (max-width:699px) {
+    .container-list {
+        .list-center {
+            flex-direction: column;
+            
+            .head-list-right {
+                text-align: end;
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+}
+
+@media (max-width:599px) {
+    .container-list {
+        .list-header {
+            background-image: url(../../assets/img/mobile.png);
+        }
+        .list-center {
+            .head-list-right {
+                margin-top: 1rem;
+
+                .input-search-active {
+                    input {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:499px) {
+    .container-list {
+        .list-center {
+            padding: 1rem 2rem;
+
+            .head-list-left {
+                ul {
+                    li {                        
+                        a {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:399px) {
+    .container-list {
+        .list-header {
+            background-position: center;
+        }
+        .container-movies {
+            background-color: transparent;
+        }
+    }
+}
