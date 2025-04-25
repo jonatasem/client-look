@@ -1,85 +1,85 @@
 .container-liked {
-    padding: 20px;
+  padding: 20px;
 
+  .header-liked {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+
+    h1 {
+      font-size: 2rem;
+      color: white;
+    }
+
+    .btn-liked-home {
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #1976d2;
+      }
+    }
+  }
+
+  .no-liked-movies {
+    text-align: center;
+    color: #777;
+    font-size: 1.2rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+
+      p {
+        margin: 0;
+      }
+
+      .btn-dlike {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #e53935;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .container-liked {
     .header-liked {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2.5rem;
-
-        h1 {
-            font-size: 2rem;
-            color: white;
-        }
-
-        .btn-liked-home {
-            background-color: #2196F3;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-
-            &:hover {
-                background-color: #1976D2;
-            }
-        }
+      h1 {
+        font-size: 25px;
+      }
     }
-
-    .no-liked-movies {
-        text-align: center;
-        color: #777;
-        font-size: 1.2rem;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-
-        li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-
-            p {
-                margin: 0;
-            }
-
-            .btn-dlike {
-                background-color: #f44336;
-                color: white;
-                border: none;
-                padding: 5px 10px;
-                border-radius: 5px;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: #e53935;
-                }
-            }
-        }
-    }
+  }
 }
-
-@media (max-width:599px) {
-    .container-liked {
-        .header-liked {
-            h1 {
-                font-size: 25px;
-            }
-        }
+@media (max-width: 599px) {
+  .container-liked {
+    .header-liked {
+      h1 {
+        font-size: 20px;
+      }
     }
-}
-@media (max-width:599px) {
-    .container-liked {
-        .header-liked {
-            h1 {
-                font-size: 20px;
-            }
-        }
-    }
+  }
 }

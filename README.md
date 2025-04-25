@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+# Client Look
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação para gerenciar e visualizar filmes, permitindo que os usuários curtam seus filmes favoritos e visualizem detalhes de cada filme. A aplicação é construída com React para o frontend e Express para o backend.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend**: React, Redux, React Router
+- **Backend**: Node.js, Express
+- **Estilo**: SCSS
+- **Documentação**: Swagger
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Listar todos os filmes disponíveis.
+- Visualizar detalhes de um filme específico.
+- Curtir e descurtir filmes.
+- Ver filmes curtidos em uma lista separada.
+- Pesquisa de filmes.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Estrutura do Projeto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- moviesApi.ts // Funções para interagir com a API
+- store.ts // Configuração do Redux store
+- LikedMovies // Componente para exibir filmes curtidos
+- MovieDetails // Componente para exibir detalhes do filme
+- MovieList // Componente para listar filmes
+- moviesSlice.ts // Redux slice para gerenciar o estado dos filmes
+- Movie.ts // Interface para o objeto Movie
+- index.tsx // Ponto de entrada da aplicação
+- package.json // Dependências e scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Instalação
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Pré-requisitos
+
+- Node.js
+- NPM ou Yarn
+
+### Configuração do Backend
+
+1. Navegue até a pasta do backend:
+   cd backend
+
+2. Instale as dependências:
+   npm install
+3. Inicie o servidor:
+   npm start
+
+### Configuração do Frontend
+
+1. Navegue até a pasta do frontend:
+   cd frontend
+
+2. Instale as dependências:
+   npm install
+3. Inicie o servidor de desenvolvimento:
+   npm run dev
+
+## Uso
+
+- Acesse a aplicação web em `http://localhost:5173`.
+
+## Endpoints da API
+
+1. **GET /api/movies** - Retorna a lista de todos os filmes.
+2. **GET /api/movies/:id** - Retorna os detalhes de um filme específico pelo ID.
+
+## Contribuição
+
+Sinta-se à vontade para contribuir! Abra uma issue ou envie um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a MIT License. Veja o arquivo `LICENSE` para mais detalhes.
