@@ -1,5 +1,7 @@
 # Client Look
 
+![Banner do Projeto](./src/assets/img/look-client.png)
+
 Uma aplicação para gerenciar e visualizar filmes, permitindo que os usuários curtam seus filmes favoritos e visualizem detalhes de cada filme. A aplicação é construída com React para o frontend e Express para o backend.
 
 ## Tecnologias Utilizadas
